@@ -1,4 +1,4 @@
-01 web_lovetok:
+**01 web_lovetok:**
     Link: https://app.hackthebox.com/challenges/lovetok
     Hint/Solution "?format=${system(@_GET[cmd]}&cmd=ls ../"
     Explanation: 
@@ -8,4 +8,4 @@
     D. &1=ls+/: The &1=ls+/ part is likely an attempt to pass the command ls+/ as the value for the $_GET[1] parameter. 
     E. This command typically lists the files and directories in a Unix/Linux system.
 
-02 Toxic: cookie to base64
+**02 Toxic:** cookie to base64
