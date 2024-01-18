@@ -80,7 +80,7 @@ Reminder for encoding :
 \r\n\r   ->  %0d%0a%0d
 ```
  - 	After Url Encoding
- - ```
+```
    GET
    /api/games/click_topia%20HTTP/1.1%0d%0aHost:%20dev.apacheblaze.local%0d%0a%0d%0aGET%20/ HTTP/1.1
 	Host: localhost:1337
